@@ -12,6 +12,9 @@ pysound is a tool box to produce, analyse, manipulate sounds (signals) in python
 - Functions
   * SNR function
 
+- Fun...
+  * Convert wav to bit music!
+
 ## Other lib helps
 
 - [sms-tool](https://github.com/MTG/sms-tools)

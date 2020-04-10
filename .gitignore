@@ -35,3 +35,6 @@
 /env
 logger/__pycache__/
 notebooks/.ipynb_checkpoints/
+*.wav
+Tests/
+samples/test.wav
