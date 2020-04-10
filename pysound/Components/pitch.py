@@ -33,8 +33,8 @@ def note_freq(note: str):
     @param note:
     @return:
     """
-    # general purpose function to convert a note  in standard notation
-    #  to corresponding frequency
+    # general purpose function to convert a note in standard notation
+    # to corresponding frequency
     if len(note) < 2 or len(note) > 3 or \
             note[0] < 'A' or note[0] > 'G':
         return 0
@@ -53,6 +53,17 @@ def note_freq(note: str):
     n = 12 * (octave - 4) + SEMITONES[note[0]] + acc
     f = 440 * (2 ** (float(n) / 12.0))
     return f
+
+
+def freq_note(freq: float) -> float:
+    """ Given a frequency, find the closest musical note """
+    A4 = 440
+    C0 = A4 * pow(2, -4.75)
+    name = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+    h = round(12*np.log2(freq/C0))
+    octave = h // 12
+    n = h % 12
+    return name[int(n)] + str(int(octave))
 
 
 if __name__ == '__main__':
