@@ -1,6 +1,16 @@
 # `pysound` 
 
 pysound is a tool box to produce, analyse, manipulate sounds (signals) in python. 
+## Structures
+
+- Components: contains basic sound generation function
+- Models: contains signal processing model
+- filters: contains filters
+
+## Things todo
+
+- Functions
+  * SNR function
 
 ## Other lib helps
 
