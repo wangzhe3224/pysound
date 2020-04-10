@@ -56,7 +56,9 @@ def note_freq(note: str):
 
 
 def freq_note(freq: float) -> float:
-    """ Given a frequency, find the closest musical note """
+    """ Given a frequency, find the closest musical note
+    Reference: https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/
+    """
     A4 = 440
     C0 = A4 * pow(2, -4.75)
     name = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
