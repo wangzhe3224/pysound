@@ -55,10 +55,13 @@ def note_freq(note: str):
     return f
 
 
-def freq_note(freq: float) -> float:
+def freq_note(freq: float) -> str:
     """ Given a frequency, find the closest musical note
     Reference: https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/
     """
+    if freq < 0.001:
+        return ' '
+
     A4 = 440
     C0 = A4 * pow(2, -4.75)
     name = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
@@ -66,6 +69,19 @@ def freq_note(freq: float) -> float:
     octave = h // 12
     n = h % 12
     return name[int(n)] + str(int(octave))
+
+
+def detect_pitch(pitches, magnitudes, t: int):
+    """
+
+    @param pitches:
+    @param magnitudes:
+    @param t: the time index
+    @return:
+    """
+    index = magnitudes[:, t].argmax()
+    pitch = pitches[index, t]
+    return pitch
 
 
 if __name__ == '__main__':
