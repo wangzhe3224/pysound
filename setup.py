@@ -1,11 +1,11 @@
 import setuptools
 
-with open("Readme.md", "r") as fh:
+with open("./Readme.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pysound", # Replace with your own username
-    version="0.0.1",
+    name="python_soundbox",
+    version="0.0.2",
     author="Zhe Wang",
     author_email="wangzhetju@gmail.com",
     description="Python and sound tools",

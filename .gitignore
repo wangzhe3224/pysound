@@ -41,3 +41,5 @@ build/
 dist/pysound-0.0.1-py3-none-any.whl
 pysound.egg-info/
 dist/
+*.egg-info/
+python_soundbox.egg-info/
