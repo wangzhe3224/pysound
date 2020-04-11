@@ -37,3 +37,7 @@ logger/__pycache__/
 notebooks/.ipynb_checkpoints/
 *.wav
 samples/test.wav
+build/
+dist/pysound-0.0.1-py3-none-any.whl
+pysound.egg-info/
+dist/
